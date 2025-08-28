@@ -6,13 +6,17 @@
 2. Navigate to your fork of the repository on GitHub
 3. Create a local copy of your fork: in the terminal, 
 ```bash
-git clone git@github.com:<your username>/git-tutorial-2025>
+git clone git@github.com:<your username>/git-tutorial-2025
 ```
 4. Now you have a local copy of this repo! Make some changes. Correct your name in the "students.txt" file (on your machine, not on GitHub).
 5. Add the file to the upcoming commit from the terminal: `git add students.txt`
-6. Add a useful message that summarizes your changes: `
+6. Add a useful message that summarizes your changes. Either add a message directly in the command line with
 ```bash
-git commit -m "<summary>"
+git commit -m "<Very useful commit message>"
+```
+or set the default commit message editor to be your editor of choice:
+```bash
+git config --global core.editor "<your favorite editor, such as vim>"
 ```
 7. Push your changes from your local environment to your fork on GitHub: 
 ```bash
@@ -37,14 +41,7 @@ In Python,
 python -m pytest
 ```
 
-4. Once the bug is fixed, commit your changes with `git commit` and a useful message. Either add a message directly in the command line with
-```bash
-git commit -m "<Very useful commit message>"
-```
-or set the default commit message editor to be your editor of choice:
-```bash
-git config --global core.editor "<your favorite editor, such as vim>"
-```
+4. Once the bug is fixed, commit your changes with `git commit` and a useful message. 
 
 5. When pushing, git will ask you to specify which remote you want to push to, with the `git push --set-upstream origin quadfix-<your-name>` command. This specifies that you want your repository on GitHub (the remote called "origin") to have a new branch with the same name as your local branch.
 6. Submit a pull request to the `main` branch. We'll review and merge later.
