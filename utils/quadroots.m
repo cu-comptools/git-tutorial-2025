@@ -17,17 +17,23 @@ function [x1, x2] = quadroots(a, b, c)
 %  -------
 %  x1, x2: float
 %     Roots of the equation.
-if nargin==0, test_quadroots; return; end
-
-x1 = (-b + sqrt(b*b - 4*a*c))/2*a;
-x2 = (-b - sqrt(b*b - 4*a*c))/2*a;
+    if nargin==0
+        test_quadroots();
+        return;
+    end
+    
+    x1 = (-b + sqrt(b*b - 4*a*c))/(2*a);
+    x2 = (-b - sqrt(b*b - 4*a*c))/(2*a);
+end
 
 %%%
-function test_quadroots
-a = 2;
-b = -5;
-c = 2;
-[root1, root2] = quadroots(a, b, c);
-root1exact = 2;
-root2exact = 0.5;
-assert(abs(root1exact - root1) < 1e-14 && abs(root2exact - root2) < 1e-14);
+function test_quadroots()
+    a = 2;
+    b = -5;
+    c = 2;
+    [root1, root2] = quadroots(a, b, c);
+    root1exact = 2;
+    root2exact = 0.5;
+    assert(abs(root1exact - root1) < 1e-14 && abs(root2exact - root2) < 1e-14);
+    disp("Test passed.");
+end
