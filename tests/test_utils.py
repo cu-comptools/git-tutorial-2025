@@ -12,4 +12,7 @@ def test_quadroots_1():
     assert (np.abs(roots[0] - x1_exact) < 1e-14) and (np.abs(roots[1] - x2_exact)) < 1e-14 
 
 def test_chebD_1():
-    pass
+    n = 1
+    D, _ = ch.chebD(n)
+    assert (D == np.array([[0.5, -0.5], [0.5, -0.5]])).all()
+
