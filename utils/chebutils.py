@@ -2,8 +2,19 @@ import numpy as np
 
 def chebD(n):
     """
-    Hint: https://people.maths.ox.ac.uk/trefethen/book.pdf, Chapter 6, pages
-    51-55.
+    Computes the Chebyshev differentiation matrix and grid points in [-1, 1].
+    
+    Parameters
+    ----------
+    n: int
+        Dimension of the chebyshev differentiation matrix.
+    
+    Returns
+    -------
+    D: n+1 x n+1 ndarray
+        Chebyshev differentiation matrix.
+    x: n+1 ndarray
+        Chebyshev grid points in [-1, 1].
     """
     if n == 0:
         x = 1; D = 0; w = 0
