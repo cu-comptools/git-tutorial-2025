@@ -2,11 +2,22 @@ import numpy as np
 
 def chebD(n):
     """
-    Hint: https://people.maths.ox.ac.uk/trefethen/book.pdf, Chapter 6, pages
-    51-55.
+    Computes and returns the Chebyshev differentiation matrix and grid vector for degree n. 
+
+    Parameters
+    ----------
+    n: integer
+        maximum polynomial degree
+
+    Returns
+    -------
+    D: numpy.ndarray
+        (n+1)x(n+1) Chebyshev differentiation matrix
+    x: numpy.ndarray
+        (1)x(n+1) Chebyshev grid vector
     """
     if n == 0:
-        x = 1; D = 0; w = 0
+        x = 1; D = 0;
     else:
         a = np.linspace(0.0, np.pi, n+1)
         x = np.cos(a)
