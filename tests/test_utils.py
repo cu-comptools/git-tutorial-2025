@@ -16,5 +16,4 @@ def test_chebD_1():
     exact = [[ 1.5, -2.0,  0.5], [ 0.5,  0.0,  -0.5], [-0.5,  2.0,  -1.5]]
     diffMatrix, grid = ch.chebD(n)
     checkArr = diffMatrix - exact
-    print(checkArr)
     assert(np.all(checkArr < 1e-14))
