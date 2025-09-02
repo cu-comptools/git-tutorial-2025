@@ -7,7 +7,7 @@ def chebD(n):
     Parameters
     ----------
     n: int
-        Dimension of the chebyshev differentiation matrix.
+       Specify n + 1 dimension of the chebyshev differentiation matrix.
     
     Returns
     -------
