@@ -2,8 +2,19 @@ import numpy as np
 
 def chebD(n):
     """
-    Hint: https://people.maths.ox.ac.uk/trefethen/book.pdf, Chapter 6, pages
-    51-55.
+    Computes a spectral differentiation matrix and Chebysev grid
+    
+    Parameters
+    ----------
+    n: <int>
+        An integer defining the number of grid points (n+1)
+    
+    Returns
+    -------
+    D: (n+1)x(n+1) matrix
+        differentiation matrix
+    x: (n+1)-d array
+        Chebysev grid
     """
     if n == 0:
         x = 1; D = 0; w = 0
